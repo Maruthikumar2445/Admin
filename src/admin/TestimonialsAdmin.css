@@ -1,0 +1,130 @@
+/* Flex row for sidebar buttons and grid */
+.admin-main-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+/* Sidebar buttons */
+.admin-header-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  min-width: 180px;
+  margin-bottom: 2.5rem;
+}
+
+/* Testimonials grid */
+.testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 2rem;
+  justify-content: flex-start;
+  margin-top: 0;
+}
+
+/* Testimonial card */
+.testimonial-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  position: relative;
+  width: 350px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 8px 32px rgba(44,62,80,0.13);
+}
+
+.testimonial-img-wrapper {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #1abc9c;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+  background: #f8f8f8;
+}
+
+.testimonial-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testimonial-author {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1abc9c;
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+
+.testimonial-role {
+  font-size: 0.98rem;
+  color: #888;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+
+.testimonial-content {
+  font-size: 1.02rem;
+  color: #222;
+  margin-bottom: 0.7rem;
+  text-align: center;
+  min-height: 60px;
+}
+
+.testimonial-location {
+  font-size: 0.97rem;
+  color: #16a085;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+
+.testimonial-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  padding-top: 1.2rem;
+  width: 100%;
+}
+
+/* Button styles */
+.admin-update-btn,
+.admin-delete-btn {
+  font-size: 1rem;
+  padding: 0.7rem 2rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.admin-update-btn {
+  background: #ffc107;
+  color: #333;
+}
+.admin-update-btn:hover {
+  background: #ffb300;
+}
+
+.admin-delete-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+.admin-delete-btn:hover {
+  background: #c0392b;
+}

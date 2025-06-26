@@ -1,0 +1,163 @@
+.admin-gallery-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+.admin-gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.admin-gallery-content {
+  padding: 1rem 1.2rem 0.5rem 1.2rem;
+}
+.admin-gallery-destination {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1abc9c;
+}
+/* Gallery Section */
+.gallery-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.2rem 0.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.06);
+}
+
+/* Flex row for sidebar buttons and grid */
+.admin-main-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+/* Stack the buttons vertically with space */
+.admin-header-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  min-width: 180px;
+  margin-bottom: 2.5rem;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 2rem;
+  justify-content: flex-start;
+  margin-top: 0;
+}
+
+.gallery-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(44,62,80,0.10);
+  overflow: hidden;
+  position: relative;
+  width: 320px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.gallery-image-wrapper:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s;
+  border-radius: 16px 16px 0 0;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.92);
+}
+
+/* Gallery card actions (Update/Delete) */
+.gallery-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.2rem;
+  padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+}
+
+/* Button styles (reuse from blogs for consistency) */
+.admin-update-btn,
+.admin-delete-btn {
+  font-size: 1rem;
+  padding: 0.7rem 2rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.admin-update-btn {
+  background: #ffc107;
+  color: #333;
+}
+.admin-update-btn:hover {
+  background: #ffb300;
+}
+
+.admin-delete-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+.admin-delete-btn:hover {
+  background: #c0392b;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .gallery-card {
+    width: 60vw;          /* Slightly larger on tablets */
+    min-width: 180px;
+    max-width: 380px;
+  }
+  .gallery-image-wrapper {
+    height: 150px;
+  }
+}
+@media (max-width: 767px) {
+  .gallery-card {
+    width: 96vw;
+    min-width: 120px;
+    max-width: 99vw;
+  }
+  .gallery-image-wrapper {
+    height: 110px;
+  }
+}

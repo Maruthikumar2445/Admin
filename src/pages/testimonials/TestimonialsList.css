@@ -1,0 +1,73 @@
+.list-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.09);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  position: relative;
+  animation: cardIn 1s;
+}
+
+@keyframes cardIn {
+  0% { opacity: 0; transform: translateY(40px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+.list-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+  animation: imgPop 1.2s;
+}
+
+@keyframes imgPop {
+  0% { opacity: 0; transform: scale(0.8);}
+  100% { opacity: 1; transform: scale(1);}
+}
+
+.list-card strong {
+  font-size: 1.2rem;
+  color: #16a085;
+}
+
+.list-card button {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: #e57373;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  margin-left: 0.5rem;
+}
+
+.list-card button:hover {
+  background: #c62828;
+  transform: scale(1.05);
+}
+
+.list-card .edit-btn {
+  background: #64b5f6;
+  right: 6.5rem;
+}
+
+.list-card .edit-btn:hover {
+  background: #1976d2;
+}

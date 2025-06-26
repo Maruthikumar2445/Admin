@@ -1,0 +1,112 @@
+.login-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(120deg, #f8fafc 0%, #e0f7fa 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bgFadeIn 1.2s;
+}
+
+@keyframes bgFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.login-form {
+  background: #ffffffcc;
+  padding: 3.5rem 3rem 3rem 3rem;
+  border-radius: 32px;
+  box-shadow: 0 12px 48px rgba(44, 62, 80, 0.13);
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  max-width: 95vw;
+  animation: formPopIn 1.1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes formPopIn {
+  0% { opacity: 0; transform: scale(0.92) translateY(60px);}
+  100% { opacity: 1; transform: scale(1) translateY(0);}
+}
+
+.login-form h1 {
+  margin-bottom: 2.5rem;
+  color: #16a085;
+  font-size: 2.7rem;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 700;
+  animation: titleSlideIn 1.2s;
+}
+
+@keyframes titleSlideIn {
+  0% { opacity: 0; transform: translateY(-40px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+.login-form input {
+  margin-bottom: 1.5rem;
+  padding: 1.1rem 1.2rem;
+  border-radius: 12px;
+  border: 1.5px solid #b2dfdb;
+  font-size: 1.15rem;
+  background: #f8fafc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.04);
+  animation: inputFadeIn 1.3s;
+}
+
+@keyframes inputFadeIn {
+  0% { opacity: 0; transform: translateX(-30px);}
+  100% { opacity: 1; transform: translateX(0);}
+}
+
+.login-form input:focus {
+  border-color: #16a085;
+  outline: none;
+  box-shadow: 0 0 0 2px #b2dfdb55;
+}
+
+.login-form button {
+  background: linear-gradient(90deg, #16a085 0%, #1abc9c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.09);
+  animation: btnPop 1.4s;
+}
+
+@keyframes btnPop {
+  0% { opacity: 0; transform: scale(0.8);}
+  100% { opacity: 1; transform: scale(1);}
+}
+
+.login-form button:hover {
+  background: linear-gradient(90deg, #1abc9c 0%, #16a085 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(44, 62, 80, 0.18);
+}
+
+.login-error {
+  color: #e74c3c;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  animation: errorShake 0.4s;
+}
+
+@keyframes errorShake {
+  0% { transform: translateX(0);}
+  20% { transform: translateX(-8px);}
+  40% { transform: translateX(8px);}
+  60% { transform: translateX(-8px);}
+  80% { transform: translateX(8px);}
+  100% { transform: translateX(0);}
+}
