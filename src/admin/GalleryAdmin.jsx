@@ -78,7 +78,9 @@ const GalleryAdmin = ({ onBack }) => {
         </div>
         <div className="admin-main-row">
           <div className="admin-header-actions">
-            <button className="admin-back-btn" onClick={onBack}>Back to Dashboard</button>
+            <button className="admin-back-btn" onClick={onBack}>
+              Back to Dashboard
+            </button>
             <button className="admin-action-btn" onClick={() => setShowAddGallery(true)}>+ Add Photo</button>
           </div>
           <div className="gallery-grid">

@@ -5,34 +5,50 @@ import GalleryAdmin from "./admin/GalleryAdmin";
 import "./AdminDashboard.css";
 
 const AdminDashboard = () => {
-	const [section, setSection] = useState(null);
+	const [activeSection, setActiveSection] = useState("blogs");
 
-	// Initial three big buttons
-	if (!section) {
-		return (
-			<div className="admin-dashboard-bg" style={{ minHeight: "100vh", background: "linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)" }}>
-				<h1 className="admin-main-title">Welcome, Admin!</h1>
-				<div className="admin-big-btn-group">
-					<button className="admin-big-btn blogs" onClick={() => setSection("blogs")}>
-						Blogs
-					</button>
-					<button className="admin-big-btn testimonials" onClick={() => setSection("testimonials")}>
-						Testimonials
-					</button>
-					<button className="admin-big-btn gallery" onClick={() => setSection("gallery")}>
-						Gallery
-					</button>
+	return (
+		<div className="admin-dashboard">
+			<aside className="admin-sidebar">
+				<div className="admin-sidebar-header">
+					<h2>
+						Welcome,
+						<br />
+						Admin
+					</h2>
 				</div>
-			</div>
-		);
-	}
-
-	// Section view
-	if (section === "blogs") return <BlogsAdmin onBack={() => setSection(null)} />;
-	if (section === "testimonials") return <TestimonialsAdmin onBack={() => setSection(null)} />;
-	if (section === "gallery") return <GalleryAdmin onBack={() => setSection(null)} />;
-
-	return null;
+				<button
+					className={`admin-sidebar-btn${
+						activeSection === "blogs" ? " active" : ""
+					}`}
+					onClick={() => setActiveSection("blogs")}
+				>
+					Blogs
+				</button>
+				<button
+					className={`admin-sidebar-btn${
+						activeSection === "testimonials" ? " active" : ""
+					}`}
+					onClick={() => setActiveSection("testimonials")}
+				>
+					Testimonials
+				</button>
+				<button
+					className={`admin-sidebar-btn${
+						activeSection === "gallery" ? " active" : ""
+					}`}
+					onClick={() => setActiveSection("gallery")}
+				>
+					Gallery
+				</button>
+			</aside>
+			<main className="admin-main-content">
+				{activeSection === "blogs" && <BlogsAdmin />}
+				{activeSection === "testimonials" && <TestimonialsAdmin />}
+				{activeSection === "gallery" && <GalleryAdmin />}
+			</main>
+		</div>
+	);
 };
 
 export default AdminDashboard;

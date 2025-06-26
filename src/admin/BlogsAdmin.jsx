@@ -96,7 +96,9 @@ const BlogsAdmin = ({ onBack }) => {
 				</div>
 				<div className="admin-main-row">
 					<div className="admin-header-actions">
-						<button className="admin-back-btn" onClick={onBack}>Back to Dashboard</button>
+						<button className="admin-back-btn" onClick={onBack}>
+							Back to Dashboard
+						</button>
 						<button className="admin-action-btn" onClick={() => setShowAddBlogOverlay(true)}>+ Add Blog</button>
 					</div>
 					<div className="blog-grid">

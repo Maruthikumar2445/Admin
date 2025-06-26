@@ -1,4 +1,10 @@
 /* Main dashboard styles */
+.admin-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f7fafd;
+}
+
 .admin-dashboard-bg {
   display: flex;
   flex-direction: column;
@@ -7,6 +13,7 @@
   min-height: 100vh;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
+
 .admin-main-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -15,11 +22,13 @@
   color: #1abc9c;
   letter-spacing: 1px;
 }
+
 .admin-big-btn-group {
   display: flex;
   gap: 2.5rem;
   justify-content: center;
 }
+
 .admin-big-btn {
   font-size: 1.5rem;
   padding: 2rem 3.5rem;
@@ -32,6 +41,7 @@
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
 }
+
 .admin-big-btn:hover {
   background: linear-gradient(90deg, #16a085 0%, #1abc9c 100%);
   transform: translateY(-2px) scale(1.04);
@@ -72,6 +82,7 @@
   margin: 0 auto;
   padding-bottom: 2.5rem;
 }
+
 .testimonial-card {
   background: white;
   border-radius: 15px;
@@ -89,10 +100,12 @@
   display: flex;
   flex-direction: column;
 }
+
 .testimonial-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 35px rgba(255, 107, 107, 0.1);
 }
+
 .testimonial-img-wrapper {
   width: 80px;
   height: 80px;
@@ -102,6 +115,7 @@
   padding: 2px;
   margin: 0 auto 1rem auto;
 }
+
 .testimonial-img {
   width: 100%;
   height: 100%;
@@ -109,9 +123,11 @@
   border-radius: 50%;
   transition: transform 0.3s;
 }
+
 .testimonial-card:hover .testimonial-img {
   transform: scale(1.1);
 }
+
 .testimonial-author {
   display: flex;
   align-items: center;
@@ -119,10 +135,12 @@
   justify-content: center;
   margin-bottom: 1rem;
 }
+
 .testimonial-content {
   flex: 1;
   text-align: center;
 }
+
 .testimonial-text {
   font-style: italic;
   color: #666;
@@ -130,21 +148,25 @@
   font-size: 1rem;
   margin-bottom: 1rem;
 }
+
 .rating {
   display: flex;
   gap: 0.25rem;
   justify-content: center;
 }
+
 .star {
   color: #ffc107;
   font-size: 1.15rem;
   animation: pulse 2s infinite;
 }
+
 @keyframes pulse {
   0% { transform: scale(1);}
   50% { transform: scale(1.2);}
   100% { transform: scale(1);}
 }
+
 .verified-badge {
   font-size: 0.95rem;
   color: #6c757d;
@@ -153,6 +175,7 @@
   gap: 0.5rem;
   justify-content: center;
 }
+
 .quote-icon {
   position: absolute;
   top: 20px;
@@ -175,21 +198,25 @@
   height: 100%;
   animation: fadeInUp 0.7s cubic-bezier(.39,.575,.56,1) both;
 }
+
 .admin-gallery-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 16px 32px rgba(44,62,80,0.18);
 }
+
 .admin-gallery-img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 18px 18px 0 0;
 }
+
 .admin-gallery-content {
   padding: 1.2rem 1.5rem 1.5rem 1.5rem;
   flex: 1;
   text-align: center;
 }
+
 .admin-gallery-destination {
   font-weight: 700;
   font-size: 1.1rem;
@@ -208,6 +235,7 @@
   cursor: pointer;
   transition: background 0.2s, transform 0.2s;
 }
+
 .admin-delete-btn:hover {
   background: #c0392b;
   transform: scale(1.05);
@@ -224,19 +252,23 @@
   outline: none;
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
+
 .admin-action-btn {
   background: linear-gradient(90deg, #1abc9c 0%, #16a085 100%);
   color: #fff;
 }
+
 .admin-action-btn:hover, .admin-action-btn:focus {
   background: linear-gradient(90deg, #16a085 0%, #1abc9c 100%);
   transform: translateY(-2px) scale(1.04);
   box-shadow: 0 8px 28px rgba(44,62,80,0.18);
 }
+
 .admin-back-btn {
   background: linear-gradient(90deg, #00bcd4 0%, #2196f3 100%);
   color: #fff;
 }
+
 .admin-back-btn:hover, .admin-back-btn:focus {
   background: linear-gradient(90deg, #2196f3 0%, #00bcd4 100%);
   transform: translateY(-2px) scale(1.04);
@@ -254,6 +286,7 @@
   justify-content: center;
   overflow-y: auto;
 }
+
 .admin-overlay-form {
   background: #fff;
   border-radius: 24px;
@@ -265,6 +298,7 @@
   position: relative;
   animation: fadeInUp 0.5s;
 }
+
 .admin-form-title {
   font-size: 2rem;
   font-weight: 700;
@@ -273,11 +307,13 @@
   text-align: center;
   flex: 1;
 }
+
 .admin-overlay-form .form-label {
   font-weight: 600;
   color: #333;
   margin-bottom: 0.5rem;
 }
+
 .admin-overlay-form .form-control {
   border-radius: 12px;
   padding: 0.9rem 1.1rem;
@@ -287,11 +323,13 @@
   background: #f8f9fa;
   transition: border 0.2s;
 }
+
 .admin-overlay-form .form-control:focus {
   border: 1.5px solid #1abc9c;
   background: #fff;
   outline: none;
 }
+
 .admin-overlay-form img {
   border-radius: 12px;
   margin-top: 0.5rem;
@@ -312,6 +350,7 @@
   transition: background 0.2s, transform 0.2s;
   margin-left: 8px;
 }
+
 .admin-update-btn:hover {
   background: #ffb300;
   transform: scale(1.05);
@@ -392,4 +431,80 @@
 .edit-blog-form button:hover {
   background: #43a047;
   transform: scale(1.02);
+}
+
+/* Sidebar Styles */
+.admin-sidebar {
+  width: 260px;
+  background: #222c36;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 1.5rem;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 2px 0 16px rgba(44,62,80,0.07);
+}
+
+.admin-sidebar.open {
+  transform: translateX(0);
+}
+
+@media (min-width: 900px) {
+  .admin-sidebar {
+    transform: translateX(0) !important;
+    position: sticky;
+    left: 0;
+  }
+  .admin-hamburger {
+    display: none;
+  }
+}
+
+/* Sidebar header and buttons styling */
+.admin-sidebar-header {
+  margin-bottom: 2.5rem;
+  width: 100%;
+  text-align: left;
+}
+
+.admin-sidebar-header h2 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #1abc9c;
+  margin: 0 0 1.5rem 0;
+}
+
+.admin-sidebar-btn {
+  width: 100%;
+  background: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  padding: 1rem 0;
+  margin-bottom: 1.2rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+}
+.admin-sidebar-btn.active,
+.admin-sidebar-btn:hover {
+  background: #16a085;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 4px 18px rgba(44,62,80,0.13);
+}
+
+.admin-main-content {
+  flex: 1;
+  padding: 3rem 2.5rem 3rem 2.5rem;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
